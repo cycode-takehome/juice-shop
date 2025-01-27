@@ -11,7 +11,7 @@ pipeline {
                 script {
                     def response = httpRequest(
                         httpMode: 'POST',
-                        url: 'http://localhost:9494/api/v1/scan',
+                        url: 'http://cycode-broker-client:9494/api/v1/scan',
                         contentType: 'APPLICATION_JSON',
                         requestBody: """
                         {
