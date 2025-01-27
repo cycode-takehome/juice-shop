@@ -8,7 +8,7 @@ pipeline {
                     branches: [[name: '*/main']],
                     userRemoteConfigs: [[
                         url: 'https://github.com/cycode-takehome/juice-shop.git',
-                        credentialsId: 'github-token'
+                        credentialsId: 'jenkins'
                     ]]
                 ])
                 echo "Repository cloned successfully."
