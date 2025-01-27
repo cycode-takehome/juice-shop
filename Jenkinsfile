@@ -1,23 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Clone Repository') {
-            steps {
-                checkout([
-                    $class: 'GitSCM',
-                    branches: [[name: '*/main']],
-                    userRemoteConfigs: [[
-                        url: 'https://github.com/cycode-takehome/juice-shop.git',
-                        credentialsId: 'jenkins'
-                    ]]
-                ])
-                echo "Repository cloned successfully."
-            }
-        }
         stage('Build') {
             steps {
-                echo "Building the project..."
-                // Add build steps if needed
+                echo 'Building the project...'
             }
         }
         stage('Cycode Scan') {
